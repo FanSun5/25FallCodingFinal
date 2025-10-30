@@ -3,6 +3,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float moveSpeed = 5f;
+    private bool m_facingRight = true;
    
     private Rigidbody2D rb;
     
@@ -14,10 +15,14 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        float x = Input.GetAxis("Horizontal");
+        move();    
+    }
 
-        float y = Input.GetAxis("Vertical");
+    private void move()
+    {
+        float x_moveInput = Input.GetAxis("Horizontal");
+        float y_moveInput = Input.GetAxis("Vertical");
 
-       
+        rb.linearVelocity = new Vector2(x_moveInput * moveSpeed, y_moveInput * moveSpeed);  
     }
 }
