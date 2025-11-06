@@ -3,7 +3,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float moveSpeed = 5f;
-    private bool m_facingRight = true;
+    //private bool m_facingRight = true;
    
     private Rigidbody2D rb;
     
