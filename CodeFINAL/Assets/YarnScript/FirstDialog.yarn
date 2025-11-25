@@ -1,17 +1,75 @@
-﻿title: Conversation1
+﻿title: OpeningClassroom
 ---
-This is a red Square
+<<set $hasCutter = false>>
+<<set $d1 = -1>>
+<<set $d2 = -1>>
+<<set $d3 = -1>>
+<<set $d4 = -1>>
+
+(The classroom feels strangely quiet.  
+Warm light, but the air is heavy.)
+Hina stands at the back of the room, looking at the empty seat.
+Hina:Today makes it exactly one week.  
+Mio has been missing for seven days.
+(Two students whisper near the door.)
+StudentA:Did you hear? The police labeled it as a runaway.
+StudentB:But her mom was on the news as a kidnapping suspect.  
+How could that be the same as “running away”…?
+
+StudentA:I don’t know. Teacher said we shouldn’t talk about it.  
+Everyone’s avoiding her name now.
+(Hina listens quietly, gripping her bag strap.)
+Hina:Everyone cared so much at first.  
+Hina:But after the news… everything changed.  
+Hina:It feels like… if they don’t talk about her, she’ll disappear.
+Hina:Her things are still here.  
+Hina:She didn’t run away. I know she didn’t.
+Hina:Her locker… Maybe there’s a clue inside.
 ===
-title: Conversation2
+title: MioDesk
 ---
-This is a blue Square
+(Mio’s desk isn’t messy, but it hasn’t been reorganized in a long time.  
+Everything is in the places she always used… like time just stopped here.)
+
+On the desk:
+Half-finished math notes, a pen without its cap,  
+slightly warped sticky notes with faint water marks,  
+a couple of extracurricular books stacked loosely,  
+a workbook with a folded corner,  
+a convenience store receipt with simple items.
+Hina:
+She didn’t disappear on purpose.  
+It just feels like… she was about to come back.
+<<jump MioDeskOptions>>
 ===
-<<<<<<< HEAD
-title: DeskBoy
+title: MioDeskOptions
 ---
-Hina:He never pays attention in class.
-Hina:Mio once tried to remind him for the teacher…
-Hina:And he even snapped at her for it.
+What should I look at?
+    -> Read the notebook
+        (A notebook lies on the desk, filled with fragmented sentences.)
+        “I want to feel warm.”  
+        “I want to feel loved.”  
+        “I want to taste something that doesn’t disappear.”
+        Hina:…What was she writing?  
+        This isn’t like her usual notes.
+        <<jump MioDeskOptions>>
+    -> Notice the feather
+        (Near the leg of the desk, almost hidden by the chair,  
+        there’s a small white feather on the floor.)
+        Hina:…A feather?  
+        Why would something like this be here…?
+        She stares at it for a moment, then looks away.
+        <<jump MioDeskOptions>>
+    -> Check the small details
+        Hina:Stickers, smudged notes, a warped memo with water marks…  
+        Like she drank a sip of water, wrote a few lines—  
+        and something interrupted her halfway.
+        Hina gently runs her fingers along the desk edge.
+        Hina:…What happened to you that day?
+        <<jump MioDeskOptions>>
+    -> Leave
+    Hina:I should look around the rest of the classroom too.
+
 ===
 title: PigeonFeather
 ---
@@ -26,37 +84,309 @@ Student B: That’s creepy.
 Student A: Her mom owed money, right? Maybe she tried something stupid. 
 Student B: Don’t say that here.
 ===
-=======
-title: Opening
+title: GenericDesk
 ---
-Student A: The police stopped searching. They said Mio probably ran away. 
-Student B: But she didn’t take her wallet or phone.  
-Student A: Maybe she just… didn’t want to come back.
-Hina: Mom and Dad won’t be home until next month.  
-Hina: Everyone else moved on.  
-Hina: Her desk is still here. Her locker’s still locked.If the police won’t check it, I will.
+(A completely ordinary desk.)  
+Homework stacked like a small mountain.
+Hina:…This is how most desks look.
 ===
-title: Locker
+title: StudyDesk
 ---
-(Hina crouches beside it.)  
-Hina: Four digits.She used to set birthdays as passwords.  
-    ->Enter the passwords
-        <<jump EnterPassword>>
-    ->Leave
+(A perfectionist’s desk.)
+Books aligned in order,  
+pencil case perfectly straight,  
+a “Exam Countdown” note taped to the side,  
+and a small motivational line: “One small step a day!”
 ===
-title: EnterPassword
+title: GirlsDesk
 ---
-Hina: Enter the first digit.
-    ->"0"
-        <<jump Password2>>
-    ->"1"
-        <<jump Password2>>
+(A lively, talkative girl’s desk.)
+Covered in cute stickers and a lip balm.  
+Hina:They talked about idols every break.  
+Mio joined sometimes…  
+But she always held back a little.
+Hina:Everyone has their own worries.  
+But Mio never talked about hers.
 ===
-title: Password2
+title: TroublemakerDesk
 ---
+(The troublemaker’s desk.)
+Pencil carvings, snack crumbs, baseball cards, old comics.  
+You open the drawer
+Inside:  
+Scrap paper, crumpled quizzes…  
+and a small box cutter.
+    -> Take Cutter
+        Hina:…I’ll borrow this for now.  
+        I’ll bring it back later.
+        <<set $hasCutter = true>>
+    -> Leave It
+    Hina:Doesn’t look like I need it yet.
+===
+title: WindowView
+---
+(Outside the window: the field after PE class.  
+Chalk dust still floats in the air.)
+A few pigeons wander across the track.
+Hina:Mio said she liked how pigeons walk.
+(A faint jingle echoes from somewhere far away—barely audible.)
+Hina:…That sound again.
+===
+title: Blackboard
+---
+On the blackboard:“March 26 (Tue)”  
+“Homework: Math Test – 5th Period”
+===
+title: ClassCalendar
+---
+(March 19 circled on the calendar.  
+“Mio Birthday” written beside it.)
+Hina:…I wrote that.  
+Hina:We were supposed to buy cake together.
+===
+title: TrashCan
+---
+(The trash can holds only crumpled worksheets and old tests.)
+Hina:None of this is hers.  
+Just normal school trash.
+===
+title: PottedPlant
+---
+(A slightly wilted plant, soil dry and cracked.)
+Hina:She watered this every morning…
+(Hina touches a leaf.)
+Hina (thought):Now… no one takes care of it.
+===
+title: NoticeBoard
+---
+(The notice board is crowded with flyers.)
+Club recruitment, festival posters,  
+exam countdowns,  
+an old missing notice,  
+and a half-torn “Seeking Witnesses”.
+Hina:Everyone moves on…  
+Hina:Only these papers still remember she was here.
+===
+title: TeacherDesk
+---
+(A pile of half-graded homework on the teacher’s desk.)
+Some pages say: “Good effort, but be more precise.”  
+The duty roster still has Mio’s name on this week.  
+A blue mug sits beside it—water still warm.
+Hina:Teacher…  
+Hina:Are you pretending nothing happened too?
+===
+title: Gossip
+---
+(Two more classmates whisper in a corner.)
+StudentC:Do you think… Mio actually ran away with her mom?
+StudentD:I don’t know. The paper said her mom owed a lot of money.  
+Maybe… she really did something bad.
+(Hina clenches her fist, jaw tight.)
+Hina:…Impossible.
+Hina:Mio would never.
+===
+title: LockerStart
+---
+(Mio’s locker stands quietly at the end of the hallway.)
+Hina:Her locker…  
+Hina:Maybe there’s something inside.
+<<if $lockerOpened == true>>
+    Hina:…I already unlocked it earlier.
+        <<jump LockerInside>>
+<<else>>
+Hina:Password… Maybe a date?? 
+    -> Enter password
+    <<jump LockerPassword>>
+
+    -> Check somewhere else first
+    Hina:
+    Maybe I should confirm a few things.
+<<endif>>
+===
+title: LockerPassword
+---
+Hina:Four digits…
+<<set $d1 = -1>>
+<<set $d2 = -1>>
+<<set $d3 = -1>>
+<<set $d4 = -1>>
+    <<jump LockerDigit1>>
+===
+title: LockerDigit1
+---
+(First digit?)
+    -> 0 
+        <<set $d1 = 0>> 
+        <<jump LockerDigit2>>
+    -> 1 
+        <<set $d1 = 1>> 
+        <<jump LockerDigit2>>
+    -> 2 
+        <<set $d1 = 2>> 
+        <<jump LockerDigit2>>
+    -> 3 
+        <<set $d1 = 3>> 
+        <<jump LockerDigit2>>
+    -> 4 
+        <<set $d1 = 4>> 
+        <<jump LockerDigit2>>
+    -> 5 
+        <<set $d1 = 5>> 
+        <<jump LockerDigit2>>
+    -> 6 
+        <<set $d1 = 6>> 
+        <<jump LockerDigit2>>
+    -> 7 
+        <<set $d1 = 7>> 
+        <<jump LockerDigit2>>
+    -> 8 
+        <<set $d1 = 8>> 
+        <<jump LockerDigit2>>
+    -> 9 
+        <<set $d1 = 9>> 
+        <<jump LockerDigit2>>
+
 ===
 
 
+title: LockerDigit2
+---
+(Second digit?)
 
+    -> 0 
+        <<set $d2 = 0>> 
+        <<jump LockerDigit3>>
+    -> 1 
+        <<set $d2 = 1>> 
+        <<jump LockerDigit3>>
+    -> 2 
+        <<set $d2 = 2>> 
+        <<jump LockerDigit3>>
+    -> 3 
+        <<set $d2 = 3>> 
+        <<jump LockerDigit3>>
+    -> 4 
+        <<set $d2 = 4>> 
+        <<jump LockerDigit3>>
+    -> 5 
+        <<set $d2 = 5>> 
+        <<jump LockerDigit3>>
+    -> 6 
+        <<set $d2 = 6>> 
+        <<jump LockerDigit3>>
+    -> 7 
+        <<set $d2 = 7>> 
+        <<jump LockerDigit3>>
+    -> 8 
+        <<set $d2 = 8>> 
+        <<jump LockerDigit3>>
+    -> 9 
+        <<set $d2 = 9>> 
+        <<jump LockerDigit3>>
+===
+title: LockerDigit3
+---
+(Third digit?)
+    -> 0
+        <<set $d3 = 0>> <<jump LockerDigit4>>
+    -> 1
+        <<set $d3 = 1>> <<jump LockerDigit4>>
+    -> 2
+        <<set $d3 = 2>> <<jump LockerDigit4>>
+    -> 3 
+        <<set $d3 = 3>> <<jump LockerDigit4>>
+    -> 4 
+        <<set $d3 = 4>> <<jump LockerDigit4>>
+    -> 5 
+        <<set $d3 = 5>> <<jump LockerDigit4>>
+    -> 6 
+        <<set $d3 = 6>> <<jump LockerDigit4>>
+    -> 7 
+        <<set $d3 = 7>> <<jump LockerDigit4>>
+    -> 8 
+        <<set $d3 = 8>> <<jump LockerDigit4>>
+    -> 9 
+        <<set $d3 = 9>> <<jump LockerDigit4>>
+===
+title: LockerDigit4
+---
+(Fourth digit?)
 
->>>>>>> d45bb4e303cec6018ec140679eb44513b5f3ce2e
+    -> 0 
+        <<set $d4 = 0>> 
+        <<jump LockerCheck>>
+    -> 1 
+        <<set $d4 = 1>> 
+        <<jump LockerCheck>>
+    -> 2 
+        <<set $d4 = 2>> 
+        <<jump LockerCheck>>
+    -> 3 
+        <<set $d4 = 3>> 
+        <<jump LockerCheck>>
+    -> 4 
+        <<set $d4 = 4>> 
+        <<jump LockerCheck>>
+    -> 5 
+        <<set $d4 = 5>> 
+        <<jump LockerCheck>>
+    -> 6 
+        <<set $d4 = 6>> 
+        <<jump LockerCheck>>
+    -> 7 
+        <<set $d4 = 7>> 
+        <<jump LockerCheck>>
+    -> 8 
+        <<set $d4 = 8>> 
+        <<jump LockerCheck>>
+    -> 9 
+        <<set $d4 = 9>> 
+        <<jump LockerCheck>>
+===
+title: LockerCheck
+---
+<<if $d1 == 0 and $d2 == 3 and $d3 == 1 and $d4 == 9>>
+(*A small click echoes from the locker.*)
+Hina:…It opened.
+<<set $lockerOpened = true>>
+    <<jump LockerInside>>
+<<else>>
+(*A heavy “clunk” — wrong password.*)
+
+Hina:…That’s not it.
+    -> Try again
+        <<jump LockerPassword>>
+    -> Leave for now
+    Hina:Maybe I should look around more.
+    
+<<endif>>
+===
+title: LockerInside
+---
+(Inside the locker: neatly stacked textbooks, pencil case, folded gym clothes,  
+and a small notebook she always carried.)
+At the very back—  
+a small paper bag sealed tightly with layers of tape.
+Hina:…This one feels different.
+    -> Leave
+        Hina: ....
+    -> CheckNotebook
+        (Random fragmented lines—no clear instructions.)
+        Hina:Nothing about where she went…
+            <<jump LockerInside>>
+    -> OpenPaperBag
+        <<if $hasCutter == false>>
+            Hina:There’s so much tape…If I force it open, I might tear what’s inside.
+            Hina:I need something sharp.A box cutter… something like that.
+            <<jump LockerInside>>
+        <<else>>
+            Hina:…Let’s try the cutter I borrowed.
+            (You carefully slide the blade along the taped edge.)
+            Inside is a small folded note.
+            Hina:…An address?
+            The note reads:“Sweet Melody – River Road”
+            Hina:Sweet Melody… River Road… That’s the place mentioned in the news…
+            Hina:Mio…I’m going to find you.
+        <<endif>>
+===

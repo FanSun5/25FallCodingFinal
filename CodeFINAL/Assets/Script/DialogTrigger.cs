@@ -3,12 +3,21 @@ using Yarn.Unity;
 
 public class DialogTrigger : MonoBehaviour
 {
+
     public DialogueRunner dialogueRunner;
     public string startNode;
     public string playerTag = "Player";
     public GameObject pressEHint;
 
     private bool playerInRange = false;
+
+    public void Start()
+    {
+
+        dialogueRunner = GameObject.FindGameObjectWithTag("Dialog").GetComponent<DialogueRunner>();
+        //GetComponent<DialogueRunner> GET
+
+    }
 
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.CompareTag(playerTag)) {
