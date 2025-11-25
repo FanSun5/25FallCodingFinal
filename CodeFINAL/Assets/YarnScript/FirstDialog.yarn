@@ -6,6 +6,7 @@ title: Conversation2
 ---
 This is a blue Square
 ===
+<<<<<<< HEAD
 title: DeskBoy
 ---
 Hina:He never pays attention in class.
@@ -25,3 +26,37 @@ Student B: That’s creepy.
 Student A: Her mom owed money, right? Maybe she tried something stupid. 
 Student B: Don’t say that here.
 ===
+=======
+title: Opening
+---
+Student A: The police stopped searching. They said Mio probably ran away. 
+Student B: But she didn’t take her wallet or phone.  
+Student A: Maybe she just… didn’t want to come back.
+Hina: Mom and Dad won’t be home until next month.  
+Hina: Everyone else moved on.  
+Hina: Her desk is still here. Her locker’s still locked.If the police won’t check it, I will.
+===
+title: Locker
+---
+(Hina crouches beside it.)  
+Hina: Four digits.She used to set birthdays as passwords.  
+    ->Enter the passwords
+        <<jump EnterPassword>>
+    ->Leave
+===
+title: EnterPassword
+---
+Hina: Enter the first digit.
+    ->"0"
+        <<jump Password2>>
+    ->"1"
+        <<jump Password2>>
+===
+title: Password2
+---
+===
+
+
+
+
+>>>>>>> d45bb4e303cec6018ec140679eb44513b5f3ce2e
